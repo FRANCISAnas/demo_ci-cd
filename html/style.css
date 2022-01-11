@@ -1,0 +1,26 @@
+body {
+	background: #333;
+	color: #fff;
+}
+header {
+	margin-top: 200px;
+	text-align: center;
+}
+.form-output {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+.password-block,
+.ip-block {
+	padding: 20px;
+	margin: 20px auto;
+	width: 200px;
+	text-align: center;
+
+	border: 1px solid #000;
+}
+pre {
+	margin: 0;
+}
