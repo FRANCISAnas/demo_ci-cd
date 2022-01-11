@@ -35,4 +35,5 @@ Create network for docker
 docker network create --subnet=192.168.1.0/16 dockernet
 
 docker pull olesyudin/password-generator:latest
+docker run -ti -d -p 8888:80 --name=password-generator olesyudin/password-generator:latest
 docker run -ti -d -p 8888:80 --network dockernet --ip 192.168.1.10 --name=password-generator olesyudin/password-generator:latest
