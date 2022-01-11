@@ -26,3 +26,4 @@ CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 # Execute
 # docker build -t apache:v1 .
 # docker run -ti -d -p 80:80 --name=apache apache:v1
+# Test

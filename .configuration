@@ -1,0 +1,23 @@
+Jenkins VM
+
+SSH connection to AWS Instance or Webserver WM:
+ssh-copy-id -i ~/.ssh/vm3 student@192.168.1.5
+
+SSH connection to github repo:
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/github
+ssh -T git@github.com
+
+Connect to DockerHub:
+cat /home/student/Docker/password.txt | docker login --username olesyudin --password-stdin
+
+Push container to DockerHub:
+docker build -t password_generator:v1 .
+docker tag password_generator:v1 olesyudin/password-generator:latest
+docker push olesyudin/password-generator
+
+
+
+AWS Instance or Webserver WM
+docker pull olesyudin/password-generator:latest
+docker run -ti -d -p 80:80 --name=password-generator password-generator:latest
