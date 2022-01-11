@@ -20,6 +20,7 @@ docker push olesyudin/password-generator
 
 AWS Instance or Webserver WM
 Install:
+sudo apt update && sudo apt upgrade
 sudo apt-get install -y apache2 docker.io
 
 Change group for webserver:
@@ -30,5 +31,8 @@ sudo chmod -R g+rw /var/www
 Add user to Docker group
 sudo usermod -aG docker student
 
+Create network for docker
+docker network create --subnet=192.168.1.0/16 dockernet
+
 docker pull olesyudin/password-generator:latest
-docker run -ti -d -p 8888:80 --name=password-generator olesyudin/password-generator:latest
+docker run -ti -d -p 8888:80 --network dockernet --ip 192.168.1.10 --name=password-generator olesyudin/password-generator:latest
