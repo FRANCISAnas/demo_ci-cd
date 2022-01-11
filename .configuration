@@ -19,5 +19,16 @@ docker push olesyudin/password-generator
 
 
 AWS Instance or Webserver WM
+Install:
+sudo apt-get install -y apache2 docker.io
+
+Change group for webserver:
+cd /var/www
+sudo chgrp -R student /var/www
+sudo chmod -R g+rw /var/www
+
+Add user to Docker group
+sudo usermod -aG docker student
+
 docker pull olesyudin/password-generator:latest
-docker run -ti -d -p 80:80 --name=password-generator password-generator:latest
+docker run -ti -d -p 8888:80 --name=password-generator olesyudin/password-generator:latest
