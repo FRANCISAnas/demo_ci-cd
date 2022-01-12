@@ -14,7 +14,7 @@ RUN apt update && \
     a2enmod php7.0 && \
     service apache2 start
 
-#COPY html to /var/www/html
+#COPY files and dirs
 COPY html /var/www/html
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
@@ -26,4 +26,3 @@ CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 # Execute
 # docker build -t apache:v1 .
 # docker run -ti -d -p 80:80 --name=apache apache:v1
-# Test
