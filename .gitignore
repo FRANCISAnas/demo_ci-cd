@@ -1,2 +1,5 @@
 # Ignore configuration for Jenkins and Instance
 .configuration.sh
+
+# Ingnore private jenkins conf
+.jenkins.sh
