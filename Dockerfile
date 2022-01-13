@@ -6,7 +6,8 @@ LABEL description="Password generator on linux server"
 
 # Install Apache, PHP
 RUN apt update && \
-    apt install -y apache2 \
+    apt install -y curl \ 
+        apache2 \
         php \
         libapache2-mod-php7.0 \
         libapache2-mod-php && \
@@ -22,7 +23,3 @@ COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 EXPOSE 80
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
-
-# Execute
-# docker build -t apache:v1 .
-# docker run -ti -d -p 80:80 --name=apache apache:v1
