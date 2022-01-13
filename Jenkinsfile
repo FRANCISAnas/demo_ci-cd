@@ -3,9 +3,10 @@
 
 pipeline {
     // Check only main branch
-    agent {
-        label 'main'
-    }
+    agent 
+    // {
+    //     label 'main'
+    // }
     // Kepp 5 builds and artifacts
     options {
         buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
