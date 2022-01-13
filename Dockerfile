@@ -5,8 +5,8 @@ LABEL author="Student"
 LABEL description="Password generator on linux server"
 
 # Install Apache, PHP
-RUN apt-get update && \
-    apt-get install -y apache2 \
+RUN apt update && \
+    apt install -y apache2 \
         php \
         libapache2-mod-php7.0 \
         libapache2-mod-php && \
