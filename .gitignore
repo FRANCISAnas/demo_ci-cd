@@ -3,3 +3,6 @@
 
 # Ingnore private jenkins conf
 .jenkins.sh
+
+# Ingnore AWS instant pre-build
+.instans.sh
