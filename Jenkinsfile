@@ -1,12 +1,13 @@
-// Start only one build
-properties([disableConccurentBuilds()])
-
 pipeline {
     agent any
-    // Kepp 5 builds and artifacts
+    
     options {
+        // Kepp 5 builds and artifacts
         buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
+        // Timestamp on pipe
         timestamps()
+        // Use obly one build
+        disableConcurrentBuilds()
     }
 
     stages {
@@ -41,16 +42,3 @@ pipeline {
         }
     }
 }
-
-
-// pipeline {
-//     agent any
-
-//     stages {
-//         stage('Hello') {
-//             steps {
-//                 echo 'Hello World'
-//             }
-//         }
-//     }
-// }
