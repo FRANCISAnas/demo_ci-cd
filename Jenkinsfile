@@ -3,7 +3,7 @@
 
 pipeline {
     // Check only main branch
-    agent 
+    agent any
     // {
     //     label 'main'
     // }
