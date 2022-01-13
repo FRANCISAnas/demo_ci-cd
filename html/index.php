@@ -33,7 +33,7 @@
 		<!-- Get IP of Instance -->
 		<div class="ip-block">
 			<p>IP-addres:</p>		
-			<?php exec('sh sh_script/get_ip.sh'); ?>
+			<?php echo shell_exec('curl https://ipinfo.io/ip'); ?>
 		</div>
 	</body>
 </html>
