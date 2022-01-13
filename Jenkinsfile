@@ -2,15 +2,15 @@
 // properties([disableConccurentBuilds()])
 
 pipeline {
-    // // Check only main branch
-    // agent {
-    //     label 'main'
-    // }
-    // // Kepp 5 builds and artifacts
-    // options {
-    //     buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
-    //     timestamps()
-    // }
+    // Check only main branch
+    agent {
+        label 'main'
+    }
+    // Kepp 5 builds and artifacts
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
+        timestamps()
+    }
 
     stages {
         // Build docker container, push to DockerHub and remove
