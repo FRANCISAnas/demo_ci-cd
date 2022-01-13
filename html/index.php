@@ -12,9 +12,9 @@
 	<body>
 		<header>
 			<div class="title">
-				<h1>TEST AWS</h1>
+				<!-- <h1>TEST AWS</h1>
 				<h1>TEST DOCKER</h1>
-				<h1>TEST Jenkins</h1>
+				<h1>TEST Jenkins</h1> -->
 				<h1>Генерація псевдо випадкових паролів</h1>
 				<p>
 					Генерація псевдо випадкових паролів на основі ентропії
