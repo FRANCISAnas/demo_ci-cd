@@ -12,25 +12,21 @@
 	<body>
 		<header>
 			<div class="title">
-				<!-- <h1>TEST AWS</h1>
-				<h1>TEST DOCKER</h1>
-				<h1>TEST Jenkins</h1> -->
-				<h1>Генерація псевдо випадкових паролів</h1>
+				<h1>Generation of pseudo-random passwords</h1>
 				<p>
-					Генерація псевдо випадкових паролів на основі ентропії
-					операційної системи на базі ядра Linux
+				Generation of pseudo-random passwords based on entropy operating system based on the Linux kernel
 				</p>
 			</div>
 		</header>
 		<!-- Request new password -->
 		<div class="form-output">
 			<form action="" method="POST">
-				<input type="submit" class="btn btn-success" value="Отримати пароль адміністратора" name="get_passwd" 	id="getPasswd"/>
+				<input type="submit" class="btn btn-success" value="Get administrator password" name="get_passwd" 	id="getPasswd"/>
 			</form>
 		</div>
 		<!-- Show new password -->
 		<div class="password-block">
-			<p>Новий пароль:</p>		
+			<p>New password:</p>		
 			<?php include "get_password.php";?>
 		</div>
 		<!-- Get IP of Instance -->
