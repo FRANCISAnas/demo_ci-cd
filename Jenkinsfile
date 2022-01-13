@@ -1,12 +1,8 @@
 // Start only one build
-// properties([disableConccurentBuilds()])
+properties([disableConccurentBuilds()])
 
 pipeline {
-    // Check only main branch
     agent any
-    // {
-    //     label 'main'
-    // }
     // Kepp 5 builds and artifacts
     options {
         buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
