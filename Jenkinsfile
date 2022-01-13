@@ -17,7 +17,7 @@ pipeline {
                 script {
                     sh "docker build -t olesyudin/password-generator:${BUILD_NUMBER} ."
                     sh "docker push olesyudin/password-generator:${BUILD_NUMBER}"
-                    // sh "docker rmi -f olesyudin/password-generator:${BUILD_NUMBER}"
+                    sh "docker rmi -f olesyudin/password-generator:${BUILD_NUMBER}"
                 }
             }
         }
