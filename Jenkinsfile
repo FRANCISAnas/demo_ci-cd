@@ -24,8 +24,6 @@ pipeline {
                     // Poll SCM
                     properties([pipelineTriggers([pollSCM('* * * * *')])])
                 }
-                // Connect to git repository
-                git branch: 'main', credentialsId: 'git', url: 'git@github.com:OlesYudin/demo_ci-cd.git'
             }
 
         }
