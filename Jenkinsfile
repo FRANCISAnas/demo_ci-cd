@@ -15,7 +15,7 @@ pipeline {
         docker_container_name = "password-generator"
         port = "80"
     }
-    
+
     stages {
 
         stage('Initialize') {
@@ -28,7 +28,7 @@ pipeline {
                 git branch: 'main', credentialsId: 'git', url: 'git@github.com:OlesYudin/demo_ci-cd.git'
             }
 
-
+        }
         // Build docker container, push to DockerHub and remove
         stage('Docker build && push') {
             steps {
