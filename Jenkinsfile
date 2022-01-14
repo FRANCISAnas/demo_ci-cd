@@ -18,7 +18,7 @@ pipeline {
 
     stages {
 
-        stage('Initialize') {
+        stage('Initialize GIT') {
             steps {
                 script {
                     // Poll SCM
@@ -41,7 +41,7 @@ pipeline {
         // 2. Delete old container
         // 3. Run new container
         // 4. Remove old images 
-        stage('Puplish over SSH') {
+        stage('Puplish over SSH on EC2 Instance') {
             steps {
                 sshPublisher(publishers: [sshPublisherDesc(configName: 'AWS instance', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 
                  """docker pull ${env.docker_images}:${BUILD_NUMBER}
