@@ -45,7 +45,7 @@ pipeline {
                     patternSeparator: '[, ]+', 
                     remoteDirectory: '', 
                     remoteDirectorySDF: false, 
-                    removePrefix: '', sourceFiles: '**/*')], 
+                    removePrefix: '', sourceFiles: '')], 
                     usePromotionTimestamp: false, 
                     useWorkspaceInPromotion: false, 
                     verbose: false)])
