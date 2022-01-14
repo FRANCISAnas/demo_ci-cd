@@ -26,8 +26,8 @@ pipeline {
                 //     // sh "docker rmi -f ${env.docker_images}:${BUILD_NUMBER}"
                 // }
                 script {
-                    // sh "Hello, world! ${currentBuild.previousBuild.number}"
-                    sh "Hello, world!"
+                     sh "Hello, world! ${currentBuild.getPreviousBuild().result}"
+                    //sh "Hello, world!"
                 }
             }
         }
