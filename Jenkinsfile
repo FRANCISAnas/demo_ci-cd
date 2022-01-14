@@ -24,8 +24,8 @@ pipeline {
         // Download container from DockerHub and run container
         stage('Puplish over SSH') {
             steps {
-                sshPublisher(publishers: [sshPublisherDesc(configName: 'AWS instance', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: """
-                    docker pull olesyudin/password-generator:${BUILD_NUMBER}
+                sshPublisher(publishers: [sshPublisherDesc(configName: 'AWS instance', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 
+                 """docker pull olesyudin/password-generator:${BUILD_NUMBER}
                     docker run -d -p 80:80 --name=password-generator olesyudin/password-generator:${BUILD_NUMBER}
                     docker system prune -af""", 
                     execTimeout: 120000, 
