@@ -13,7 +13,7 @@ pipeline {
     environment {
         docker_images = "olesyudin/password-generator"
         docker_container_name = "password-generator"
-        port = "8080"
+        port = "80"
     }
 
     stages {
