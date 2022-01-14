@@ -21,7 +21,10 @@ pipeline {
                 }
             }
         }
-        // Download container from DockerHub and run container
+        // 1. Download new image from DockerHub
+        // 2. Delete old container
+        // 3. Run new container
+        // 4. Remove old images 
         stage('Puplish over SSH') {
             steps {
                 sshPublisher(publishers: [sshPublisherDesc(configName: 'AWS instance', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 
@@ -44,5 +47,3 @@ pipeline {
         }
     }
 }
-// docker rm -f password-generator
-// docker rmi -f olesyudin/password-generator:${previousBuild}
