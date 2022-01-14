@@ -26,6 +26,7 @@ pipeline {
             steps {
                 sshPublisher(publishers: [sshPublisherDesc(configName: 'AWS instance', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 
                  """docker pull olesyudin/password-generator:${BUILD_NUMBER}
+                    docker rm -f password-generator
                     docker run -d -p 80:80 --name=password-generator olesyudin/password-generator:${BUILD_NUMBER}
                     docker system prune -af""", 
                     execTimeout: 120000, 
