@@ -27,7 +27,8 @@ pipeline {
                 // }
                 script {
                     sh "Hello, world! ${BUILD_NUMBER}"
-                    // sh "Hello, world! ${currentBuild.getPreviousBuild().result}"
+                    sh "Hello, world!"currentBuild.getPreviousBuild().result
+
                     //sh "Hello, world!"
                 }
             }
