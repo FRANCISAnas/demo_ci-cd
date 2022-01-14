@@ -10,13 +10,19 @@ pipeline {
         disableConcurrentBuilds()
     }
 
+    environment {
+        docker_images = "olesyudin/password-generator"
+        docker_container_name = "password-generator"
+        port = "8080"
+    }
+
     stages {
         // Build docker container, push to DockerHub and remove
         stage('Docker build && push') {
             steps {
                 script {
-                    sh "docker build -t olesyudin/password-generator:${BUILD_NUMBER} ."
-                    sh "docker push olesyudin/password-generator:${BUILD_NUMBER}"
+                    sh "docker build -t ${env.docker_images}:${BUILD_NUMBER} ."
+                    sh "docker push ${env.docker_images}:${BUILD_NUMBER}"
                     // sh "docker rmi -f olesyudin/password-generator:${BUILD_NUMBER}"
                 }
             }
@@ -28,9 +34,9 @@ pipeline {
         stage('Puplish over SSH') {
             steps {
                 sshPublisher(publishers: [sshPublisherDesc(configName: 'AWS instance', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 
-                 """docker pull olesyudin/password-generator:${BUILD_NUMBER}
-                    docker rm -f password-generator
-                    docker run -d -p 80:80 --name=password-generator olesyudin/password-generator:${BUILD_NUMBER}
+                 """docker pull ${env.docker_images}:${BUILD_NUMBER}
+                    docker rm -f ${env.docker_container_name}
+                    docker run -d -p ${env.port}:80 --name=${env.docker_container_name} ${env.docker_images}:${BUILD_NUMBER}
                     docker system prune -af""", 
                     execTimeout: 120000, 
                     flatten: false, 
