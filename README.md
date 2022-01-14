@@ -5,20 +5,20 @@ This project will show you automation deployment from devloper machine to AWS in
 Scheme of CI/CD this project:
 ![Scheme of CI/CD](https://github.com/OlesYudin/demo_ci-cd/blob/main/scheme.png "Scheme CI/CD")
 
-WEB application:
+Local machine:
 
-- Ubuntu 16.04+;
-- Apache2;
-- PHP 7.0.
+- Jenkins and pluggin 'Publish Over SSH';
+- SSH keys (GitHub and EC2 instance);
 
 AWS EC2 Instance:
 
 - Docker container.
 
-Local machine:
+WEB application on instance:
 
-- Jenkins and pluggin 'Publish Over SSH';
-- SSH keys (GitHub and EC2 instance);
+- Ubuntu 16.04+;
+- Apache2;
+- PHP 7.0.
 
 Working dir:
 
