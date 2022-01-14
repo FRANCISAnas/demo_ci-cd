@@ -17,16 +17,6 @@ pipeline {
     }
 
     stages {
-
-        stage('Initialize GIT') {
-            steps {
-                script {
-                    // Poll SCM
-                    properties([pipelineTriggers([pollSCM('* * * * *')])])
-                }
-            }
-
-        }
         // Build docker container, push to DockerHub and remove
         stage('Docker build && push') {
             steps {
