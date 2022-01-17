@@ -9,7 +9,7 @@ This project will show you automation deployment from devloper machine to AWS in
 Local machine:
 
 - Jenkins and pluggin 'Publish Over SSH';
-- SSH keys (GitHub and EC2 instance);
+- SSH keys (GitHub and EC2 instance).
 
 AWS EC2 Instance:
 
