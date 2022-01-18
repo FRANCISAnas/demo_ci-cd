@@ -1,8 +1,9 @@
 FROM ubuntu:16.04
 
 # Description of project
-LABEL author="Student"
-LABEL description="Password generator on linux server"
+LABEL author="Student" \
+      description="Password generator on linux server" \
+      image="ubuntu16.04"
 
 # Install Apache, PHP
 RUN apt update && \
