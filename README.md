@@ -23,5 +23,6 @@ WEB application on instance:
 
 Working dir:
 
-- /html - contain WEB application
-- /terraform - need for creating Infrastructure as a Code
+- [/html](https://github.com/OlesYudin/demo_ci-cd/tree/main/html "App directory") - contain WEB application
+- [/terraform](https://github.com/OlesYudin/demo_ci-cd/tree/main/terraform "Terraform directory") - need for creating Infrastructure as a Code
+  https://github.com/OlesYudin/demo_ci-cd/tree/main/terraform
