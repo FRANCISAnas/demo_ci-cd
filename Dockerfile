@@ -16,8 +16,8 @@ RUN apt update && \
     service apache2 start
 
 #COPY files and dirs
-COPY html /var/www/html
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY html /var/www/html
 
 # Open 80 port
 EXPOSE 80
