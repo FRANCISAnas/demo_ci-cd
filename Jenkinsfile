@@ -23,6 +23,7 @@ pipeline {
                 script {
                     sh "docker build -t ${env.docker_images}:${BUILD_NUMBER} ."
                     sh "docker push ${env.docker_images}:${BUILD_NUMBER}"
+                    // Use this command to save space on the Jenkins server. Dont use it you want fast speed build
                     // sh "docker rmi -f olesyudin/password-generator:${BUILD_NUMBER}"
                 }
             }
