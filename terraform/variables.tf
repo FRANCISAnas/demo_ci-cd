@@ -1,12 +1,12 @@
 variable "env" {
-    default = "Developer"
+  default = "Developer"
 }
 variable "default_region" {
-    default = "us-east-2"
+  default = "us-east-2"
 }
 variable "instance_type" {
-    default = "t2.micro"
+  default = "t2.micro"
 }
 variable "ssh_key" {
-    default = "password-generator"
+  default = "password-generator"
 }
