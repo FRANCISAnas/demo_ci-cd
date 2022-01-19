@@ -11,6 +11,7 @@ pipeline {
     }
 
     environment {
+        docker_os_images = "Dockerfile_alpine"
         docker_images = "olesyudin/password-generator"
         docker_container_name = "password-generator"
         port = "80"
@@ -21,7 +22,7 @@ pipeline {
         stage('Docker build && push') {
             steps {
                 script {
-                    sh "docker build -t ${env.docker_images}:${BUILD_NUMBER} ."
+                    sh "docker build -t ${env.docker_images}:${BUILD_NUMBER} ${env.docker_os_images}."
                     sh "docker push ${env.docker_images}:${BUILD_NUMBER}"
                     // Use this command to save space on the Jenkins server. Dont use it you want fast speed build
                     // sh "docker rmi -f olesyudin/password-generator:${BUILD_NUMBER}"
