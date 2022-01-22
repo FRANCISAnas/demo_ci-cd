@@ -20,13 +20,13 @@
 
 ### Структура файлов:
 
-1. [`data.tf`](https://github.com/OlesYudin/Terraform/blob/main/Lesson_3-VPC/data.tf "data.tf") - Поиск AMI Linux и Availability Zone
-2. [`ec2.tf`](https://github.com/OlesYudin/Terraform/blob/main/Lesson_3-VPC/ec2.tf "ec2.tf") - Создание EC2 instance
-3. [`main.tf`](https://github.com/OlesYudin/Terraform/blob/main/Lesson_3-VPC/main.tf "main.tf") - Обьявление провайдера
-4. [`outputs.tf`](https://github.com/OlesYudin/Terraform/blob/main/Lesson_3-VPC/outputs.tf "outputs.tf") - Значения, которые будут выводится в консоли при создании инфраструктуры
-5. [`security-group.tf`](https://github.com/OlesYudin/Terraform/blob/main/Lesson_3-VPC/security-group.tf "security-group.tf") - Создание Security Groups
-6. [`variables.tf`](https://github.com/OlesYudin/Terraform/blob/main/Lesson_3-VPC/variables.tf "variables.tf") - Список начальных переменных
-7. [`vpc.tf`](https://github.com/OlesYudin/Terraform/blob/main/Lesson_3-VPC/vpc.tf "vpc.tf") - Создание виртуальной сети (VPC+Subnet+IGW+Route)
+1. [`data.tf`](https://github.com/OlesYudin/demo_ci-cd/blob/terraform_VPC/terraform_VPC/data.tf "data.tf") - Поиск AMI Linux и Availability Zone
+2. [`ec2.tf`](https://github.com/OlesYudin/demo_ci-cd/blob/terraform_VPC/terraform_VPC/ec2.tf "ec2.tf") - Создание EC2 instance
+3. [`main.tf`](https://github.com/OlesYudin/demo_ci-cd/blob/terraform_VPC/terraform_VPC/main.tf "main.tf") - Обьявление провайдера
+4. [`outputs.tf`](https://github.com/OlesYudin/demo_ci-cd/blob/terraform_VPC/terraform_VPC/outputs.tf "outputs.tf") - Значения, которые будут выводится в консоли при создании инфраструктуры
+5. [`security-group.tf`](https://github.com/OlesYudin/demo_ci-cd/blob/terraform_VPC/terraform_VPC/security-group.tf "security-group.tf") - Создание Security Groups
+6. [`variables.tf`](https://github.com/OlesYudin/demo_ci-cd/blob/terraform_VPC/terraform_VPC/variables.tf "variables.tf") - Список начальных переменных
+7. [`vpc.tf`](https://github.com/OlesYudin/demo_ci-cd/blob/terraform_VPC/terraform_VPC/vpc.tf "vpc.tf") - Создание виртуальной сети (VPC+Subnet+IGW+Route)
 
 ### <div align="center">Схема сети</div>
 
