@@ -19,7 +19,7 @@ In Docker container on webserver used:
 
 - Ubuntu 16.04+;
 - Apache2;
-- PHP 7.0.
+- PHP 7.4.
 
 AWS EC2 Instance (Jenkins) **(FUTURE)**:
 
