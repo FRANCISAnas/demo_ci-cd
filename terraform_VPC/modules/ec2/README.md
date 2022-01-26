@@ -6,7 +6,7 @@
 
 | Value                  | Default                                                                                                                                                                                             |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Region                 | [Prod](https://github.com/OlesYudin/demo_ci-cd/tree/terraform_VPC/terraform_VPC/prod.auto.tfvars#:~:text=env%20%3D%20%22-,Dev,-%22 "Dev")                                                           |
+| Environment            | [Prod](https://github.com/OlesYudin/demo_ci-cd/tree/terraform_VPC/terraform_VPC/prod.auto.tfvars#:~:text=env%20%3D%20%22-,Dev,-%22 "Dev")                                                           |
 | AMI                    | [Ubuntu 16.04 Server](https://github.com/OlesYudin/demo_ci-cd/tree/terraform_VPC/terraform_VPC/modules/ec2/data.tf "Ubuntu 16.04 Server")                                                           |
 | Region                 | [us-east-2](https://github.com/OlesYudin/demo_ci-cd/tree/terraform_VPC/terraform_VPC/prod.auto.tfvars#:~:text=region%20%3D%20%22-,us%2Deast%2D1,-%22 "us-east-1")                                   |
 | Key for SSH connection | [your_privare_AWS_key.pem](https://github.com/OlesYudin/demo_ci-cd/tree/terraform_VPC/terraform_VPC/modules/ec2/variables.tf#:~:text=variable%20%22ssh_key%22%20%7B,%7D "your_privare_AWS_key.pem") |
