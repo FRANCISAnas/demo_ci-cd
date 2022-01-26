@@ -4,7 +4,7 @@
 
 - [`ec2`](https://github.com/OlesYudin/demo_ci-cd/tree/terraform_VPC/terraform_VPC/modules/ec2 "ec2") - создание AWS EC2 instance
 
-- [`Security-group`](https://github.com/OlesYudin/demo_ci-cd/tree/terraform_VPC/terraform_VPC/Security-group "Security-group") - создание Security Group для Virtual Private Cloud
+- [`Security-group`](https://github.com/OlesYudin/demo_ci-cd/tree/terraform_VPC/terraform_VPC/modules/Security-group "Security-group") - создание Security Group для Virtual Private Cloud
 
 - [`vpc`](https://github.com/OlesYudin/demo_ci-cd/tree/terraform_VPC/terraform_VPC/modules/vpc "vpc") - создание сети
 
