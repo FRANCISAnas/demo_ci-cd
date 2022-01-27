@@ -23,6 +23,8 @@ In Docker container on webserver used:
 
 AWS EC2 Instance (Jenkins) **(FUTURE)**:
 
+- Docker container with official Jenkins container based on Alpine image [(jenkins/jenkins:2.330-alpine)](https://hub.docker.com/layers/jenkins/jenkins/2.330-alpine/images/sha256-3a351e0ab19b497dc4c862d950a64bc8d323410a287a080ce453dd56a6c33579?context=explore "(jenkins/jenkins:2.330-alpine)")
+
 1. Install docker and login;
 2. Push image from [DockerHub](https://hub.docker.com/ "DockerHub") with [jenkins/jenkins:2.330-alpine](https://hub.docker.com/layers/jenkins/jenkins/2.330-alpine/images/sha256-3a351e0ab19b497dc4c862d950a64bc8d323410a287a080ce453dd56a6c33579?context=explore "jenkins/jenkins:2.330-alpine") image;
 3. Install plugins for Git connections and PublishOverSSH
