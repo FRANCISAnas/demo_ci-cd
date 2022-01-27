@@ -11,7 +11,7 @@ Local machine:
 - Jenkins and pluggin 'Publish Over SSH';
 - SSH keys (GitHub and EC2 instance).
 
-AWS EC2 Instance (WebServer):
+AWS EC2 Instance ([Webserver](https://github.com/OlesYudin/demo_ci-cd/blob/terraform_VPC/terraform_VPC/modules/ec2/shell/password_config.sh "Webserver")):
 
 - Docker container.
 
@@ -21,7 +21,7 @@ In Docker container on webserver used:
 - Apache2;
 - PHP 7.4.
 
-AWS EC2 Instance (Jenkins) **(FUTURE)**:
+AWS EC2 Instance ([Jenkins](https://github.com/OlesYudin/demo_ci-cd/blob/terraform_VPC/terraform_VPC/modules/ec2/shell/jenkins_config.sh "Jenkins")):
 
 - Docker container with official Jenkins container based on Alpine image [(jenkins/jenkins:2.330-alpine)](https://hub.docker.com/layers/jenkins/jenkins/2.330-alpine/images/sha256-3a351e0ab19b497dc4c862d950a64bc8d323410a287a080ce453dd56a6c33579?context=explore "(jenkins/jenkins:2.330-alpine)")
 
