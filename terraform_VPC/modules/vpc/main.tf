@@ -16,7 +16,7 @@ resource "aws_subnet" "public_subnet" {
   vpc_id = aws_vpc.vpc.id            # Connect our VPC with subnet
   # (https://www.terraform.io/language/functions/cidrsubnet)
   # Give subnets IP from VPC range.
-  cidr_block              = cidrsubnet(var.cidr_vpc, 8, count.index + 1)             # 172.31.0.0/16 ==> 172.31.X.X/24 
+  cidr_block              = var.public_subnet[count.index]                           # 172.31.0.0/16 ==> 172.31.X.X/24 
   availability_zone       = data.aws_availability_zones.available.names[count.index] # For 2 subnets give available zone
   map_public_ip_on_launch = true                                                     # Give public IP
 
